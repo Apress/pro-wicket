@@ -1,0 +1,48 @@
+<wicket:head>
+    <title>Deck Demonstration</title>
+	<link rel="stylesheet" type="text/css" href="deck/deck.css"/>    
+	<script src="deck/deck.js"></script>
+</wicket:head>
+<wicket:panel>
+  <div style="width:200px;" >
+      <div>
+      
+         <div wicket:id="headers" class="ProShowItem">
+	          <div class="ProShowItemHeader" onclick="alert('first')" >
+	            <img src="resources/java_small.jpg" 
+	                 alt="The Duke" 
+	                 style="margin-right: 8px; vertical-align:bottom;" />
+	            <span wicket:id="headerTitle">Java</span>
+	          </div>
+	          <div class="ProShowItemContent">
+	            <table>
+	              <tbody>
+	                <tr wicket:id="detail">
+	                  <td>
+	                  <a wicket:id="bookLink" href="http://www.apress.com/book/bookDisplay.html?bID=10189">
+	                  	<span wicket:id="bookTitle">
+	                  Pro Wicket: Explore this leading open source, lightweight,
+						component-based POJO web development framework.
+						</span>
+	                  </a>
+	                  </td>
+	                </tr>
+	              </tbody>
+	            </table>
+	          </div>
+         </div>
+		 <!--         
+         <div class="ProShowItem">
+          <div class="ProShowItemHeader" onclick="alert('second')" >
+          Open Source
+          </div>
+         </div>
+         <div class="ProShowItem">
+          <div class="ProShowItemHeader" onclick="alert('third')" >
+          .NET
+          </div>
+         </div>
+         -->
+      </div>
+    </div>
+</wicket:panel>

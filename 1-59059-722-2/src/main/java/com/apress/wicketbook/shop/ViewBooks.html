@@ -1,0 +1,53 @@
+<html>
+<head><title>Browse Books</title></head>
+<style>
+tr.even{
+background-color: #ffebcd;
+}
+tr.odd{
+background-color: #ffa;
+}
+</style>
+<body>
+<form name="viewBookForm" wicket:id="bookForm">
+<table>
+	<tr>
+	<td><b>Categories</b></td>
+	<td>
+		<!-- The corresponding Wicket component is
+		wicket.markup.html.form.DropDownChoice.
+		The "select" content will be replaced at
+		runtime -->
+		<select wicket:id="categories">
+		<option>category-1</option>
+		<option>category-2</option>
+		<option>category-3</option>
+		</select>
+	</td>
+	</tr>
+</table>
+<!-- Rest of the content snipped for clarity -->
+<span wicket:id="navigator">[dataview navigator]</span>
+<table cellspacing="0" class="dataview" border="1">
+	<tr>
+		<th align="center">Title</th>
+		<th align="center">Author</th>
+		<th align="center">Publisher</th>
+		<th align="center">Price</th>
+	</tr>
+	<!-- This data will be dynamically generated -->
+	<tr wicket:id="books">
+		<td><span wicket:id="title">[title]</span></td>
+		<td><span wicket:id="author">[author]</span> </td>
+		<td><span wicket:id="publisher">[publisher]</span></td>
+		<td align="right"><span wicket:id="price">[price]</span></td>
+		<td align="right"><input type="checkbox" wicket:id="selected" /></td>
+	</tr>
+	<tr>
+		<td><input type="submit" value="Add to Cart" wicket:id="addToCart"/></td>
+	</tr>
+</table>
+</form>
+<a href="index.html">Back to Index</a>
+</body>
+</html>

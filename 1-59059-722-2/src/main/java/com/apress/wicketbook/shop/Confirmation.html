@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Book Purchase Confirmation</title>
+</head>
+<body>
+Following books have been shipped to your shipping address
+<br/><br/>
+<table border="1">
+<th>Title</th><th>Quantity</th><th>Price</th>
+<tr wicket:id="booksBought">
+<td><span wicket:id="book.title">Pro Spring</span></td>
+<td><span wicket:id="quantity">1</span></td>
+<td><span wicket:id="totalPrice">1</span></td>
+</tr>
+</table>
+<br>
+Total Price : $<span wicket:id="totalPrice">80</span>
+<a href="index.html">Back to Index</a>
+</body>
+</html>

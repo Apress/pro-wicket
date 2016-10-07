@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>perfil de usuario</title>
+ <style>
+		  body { font-size: 9pt;}
+ </style>
+</head>
+<body>
+<span wicket:id="feedback"></span>
+<form wicket:id="userProfile">
+Nombre Del Usuario <input type="text" wicket:id="name"/><br/>
+Dirección <input type="text" wicket:id="address"/><br/>
+Ciudad <input type="text" wicket:id="city"/><br/>
+País <select wicket:id="country">
+<option>India</option>
+<option>USA</option>
+<option>UK</option>
+</select><br/>
+Número de identificación <input type="text" wicket:id="pin"/><br/>
+Teléfono <input type="text" wicket:id="phoneNumber"/><br/>
+<hr/>
+<input type="submit" value="Save"/>
+<span valign="top" wicket:id="locale">
+<input type="radio">inglés</input>
+<input type="radio">español</input>
+</span>
+<hr/>
+</form>
+</body>
+</html>

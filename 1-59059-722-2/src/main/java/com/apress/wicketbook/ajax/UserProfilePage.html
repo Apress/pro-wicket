@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>User Profile</title>
+	<style>
+			  body { font-size: 9pt;}
+	</style>
+</head>
+<body>
+	<!-- Added a span to display feedback -->
+	<span wicket:id="feedback">Message goes here</span>
+	
+	<form wicket:id="userProfile">
+		User Name <span wicket:id="nameBorder">
+		<input type="text" wicket:id="name"/></span><br/>
+		Address<input type="text" wicket:id="address"/><br/>
+		City <input type="text" wicket:id="city"/><br/>
+		Country <select wicket:id="country">
+		<!--The markup here is for preview purposes only. Wicket
+		replaces this with actual data when rendering the page -->
+			<option>India</option>
+			<option>USA</option>
+			<option>UK</option>
+		</select><br/>
+		State/County <select wicket:id="state">
+						<option>California</option>
+						<option>Michigan</option>
+					 </select>
+		<!-- You will specify the image URL on the server side -->		 
+		<img src="" wicket:id="indicatorImg" style="display:none"/><br/>
+		Pin <span wicket:id="pinBorder"><input type="text" wicket:id="pin"/>
+		</span><br/>
+		Phone <span wicket:id="phoneBorder"><input type="text"
+		wicket:id="phoneNumber"/></span>
+		<hr/>
+		<input type="submit" value="Save"/>
+	</form>
+	<a href="index.html">Back to Index</a>
+</body>
+</html>

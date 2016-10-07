@@ -1,0 +1,21 @@
+<persistence>
+	<persistence-unit name="wicketPersistenceManager" transactiontype="RESOURCE_LOCAL">
+		<!--the bean that needs to be persisted -->
+		<class>com.apress.wicketbook.common.Book</class>
+		<!--
+		Vendor specific properties goes here. You will use Hibernate3 EJB3
+		implementation with HSQL Db configured
+		-->
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
+			<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
+			<property name="hibernate.connection.username" value="sa"/>
+			<property name="hibernate.connection.password" value=""/>
+			<property name="hibernate.connection.url" value="jdbc:hsqldb:."/>
+			<property name="hibernate.max_fetch_depth" value="3"/>
+			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+			<property name="hibernate.show_sql">true</property>
+			<property name="hibernate.jdbc.batch_size" value="0"/>
+		</properties>
+	</persistence-unit>
+</persistence>

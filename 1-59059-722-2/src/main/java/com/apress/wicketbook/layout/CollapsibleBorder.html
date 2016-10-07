@@ -1,0 +1,26 @@
+<wicket:head>
+	<style>
+		.header {color:#729ac2; cursor:pointer; font-weight:bold; border-top:1px solid
+		#300;}
+		.collapsibleBorder {display:none;}
+	</style>
+	<script>
+		// The JavaScript function that toggles the visibility of the div element
+		// encloses the markup that it is decorating.
+		function toggle(collapsibleBorderId) {
+		var styleObj = document.getElementById(collapsibleBorderId).style;
+		styleObj.display = (styleObj.display == 'block')? 'none': 'block';
+		}
+	</script>
+</wicket:head>
+<wicket:border>
+	<div>
+	<!-- This holds on to the header text -->
+	<div class="header" wicket:id="header">+
+	<span wicket:id="headerText"></span></div>
+	<!-- The collapsible border -->
+	<div wicket:id="collapsibleBorder" class="collapsibleBorder">
+		<wicket:body/>
+	</div>
+	</div>
+</wicket:border>

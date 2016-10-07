@@ -1,0 +1,36 @@
+<html>
+<head><title>Checkout Books</title></head>
+<body>
+<form name="checkoutForm" wicket:id="checkoutForm">
+<table cellspacing="0" border="1">
+<tr>
+	<th align="center">Title</th>
+	<th align="center">Author</th>
+	<th align="center">Price</th>
+	<th align="center">Quantity</th>
+</tr>
+<tr wicket:id="checkoutBooks">
+	<td><span wicket:id="book.title">Python</span></td>
+	<td><span wicket:id="book.author">Martelli</span> </td>
+	<td align="right"><span wicket:id="book.price">44</span></td>
+	<td align="right"><input type="text" value="1" size="4"
+	wicket:id="quantity"/></td>
+	<!- Added check box for marking a book for removal -->
+	<td align="right"><input type="checkbox" wicket:id="markedForRemoval"/></td>
+</tr>
+<tr>
+	<td colspan="6">Total :<span wicket:id="priceTotal">44</span>$</td>
+</tr>
+<!-- Add the buttons that you want displayed -->
+<tr>
+	<td></td>
+	<td><input type="submit" value="Recalculate" wicket:id="recalculate"/></td>
+	<td><input type="submit" value="Checkout" wicket:id="checkOut"/></td>
+	<td><input type="submit" value="Remove" wicket:id="removeBooks"/></td>
+</tr>
+</table>
+	<a href="" wicket:id="login">Login</a>
+</form>
+<a href="index.html">Back to Index</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<!-- Internationalized page title -->
+<title>User Profile</title>
+ <style>
+		  body { font-size: 9pt;}
+  </style>
+</head>
+<body>
+<span wicket:id="feedback"></span>
+<!-- Internationalized page labels -->
+<form wicket:id="userProfile">
+	<wicket:message key="name"></wicket:message>
+	<input type="text" wicket:id="name"/><br/>
+	<wicket:message key="address"></wicket:message>
+	<input type="text" wicket:id="address"/><br/>
+	<wicket:message key="city"></wicket:message>
+	<input type="text" wicket:id="city"/><br/>
+	<wicket:message key="country"></wicket:message>
+	<select wicket:id="country">
+		<option>Country-1</option>
+		<option>Country-2</option>
+		<option>Country-3</option>
+	</select><br/>
+	<wicket:message key="pin"></wicket:message>
+	<input type="text" wicket:id="pin"/><br/>
+	<wicket:message key="phoneNumber"></wicket:message>
+	<input type="text" wicket:id="phoneNumber"/>	<br/>
+	<!--
+	Salary <input type="text" wicket:id="salary"/>
+	-->
+	<br/>
+	<hr/>
+	<span wicket:id="locale">
+		<input type="radio">English</input>
+		<input type="radio">Spanish</input>
+	</span>
+	<input type="submit" wicket:id="save" value="Save"/>
+</form>
+	<a href="index.html">Back to Index</a>
+</body>
+</html>

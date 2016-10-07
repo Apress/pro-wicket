@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Browse Books</title>
+	</head>
+	<body>
+		<form name="viewBookForm" wicket:id="viewBookForm">
+			<table>
+				<tr>
+					<td><b>Categories</b></td>
+					<td>
+					<select wicket:id="categories">
+						<option>J2EE</option>
+						<option>ASP.NET</option>
+						<option>Scripting</option>
+					</select>
+					</td>
+				</tr>
+			</table>
+			<table border="1">
+			<!-- The column headers have been ignored -->
+				<tr wicket:id="books">
+					<td><span wicket:id="title">[Book Title]</span></td>
+					<td><span wicket:id="author">[Book Author]</span></td>
+					<td><span wicket:id="publisher">[Book Publisher]</span></td>
+					<td><span wicket:id="price">[Book Price]</span></td>
+				</tr>
+			</table>
+		</form>
+		<a href="index.html">Back to Index</a>
+	</body>
+</html>

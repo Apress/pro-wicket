@@ -1,0 +1,16 @@
+<table border="1">
+<tr>
+<th>Title</th>
+<th>Author</th>
+<th>Publisher</th>
+<th>Price</th>
+</th>
+#foreach ($book in $bookList)
+<tr>
+<td>$book.title</td>
+<td>$book.author</td>
+<td>$book.publisher</td>
+<td>$book.price</td>
+</tr>
+#end
+</table>

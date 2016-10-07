@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD
+Web Application 2.3//EN"
+"http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<display-name>Pro Wicket</display-name>
+	
+	<!-- Spring's ContextLoader will look for Spring xml files specified here -->
+	<!--
+		Spring by default looks for a file named applicationContext.xml under the
+		WEB-INF folder.
+		This default configuration is therefore commented.
+		<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+		</context-param>
+	-->
+	<!--
+	Spring ships with this listener that loads the above
+	applicationContext.xml and binds it
+	to the servlet context that is later used by SpringWebApplicationFactory
+	to look up SpringWebApplication.
+	-->
+	
+	<!-- uncomment to run with Spring and EJB3 		
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>IntegrationApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationFactoryClassName</param-name>
+			<param-value>wicket.spring.SpringWebApplicationFactory</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>	
+
+	-->
+	<servlet>
+		<servlet-name>HelloWorldApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.forms.HelloWorldApplication
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>configuration</param-name>
+			<param-value>development</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ValidationApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.validation.ValidationApplication
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>BookShopApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.shop.BookStoreApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>LayoutApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.layout.BookStoreApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ExtensionsApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.extensions.BookStoreApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>LocalizationApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.localization.LocalizationApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>AjaxifiedApplication</servlet-name>
+		<servlet-class>wicket.protocol.http.WicketServlet</servlet-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.apress.wicketbook.ajax.AjaxApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ValidationApplication</servlet-name>
+		<url-pattern>/validation/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>HelloWorldApplication</servlet-name>
+		<url-pattern>/helloworld/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BookShopApplication</servlet-name>
+		<url-pattern>/shop/*</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>LayoutApplication</servlet-name>
+		<url-pattern>/layout/*</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>ExtensionsApplication</servlet-name>
+		<url-pattern>/extensions/*</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>LocalizationApplication</servlet-name>
+		<url-pattern>/localization/*</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>AjaxifiedApplication</servlet-name>
+		<url-pattern>/ajax/*</url-pattern>
+	</servlet-mapping>	
+	
+	<!-- Un comment to run with Spring and EJB3 	
+	<servlet-mapping>
+		<servlet-name>IntegrationApplication</servlet-name>
+		<url-pattern>/integration/*</url-pattern>
+	</servlet-mapping>	
+	-->
+	
+</web-app>
